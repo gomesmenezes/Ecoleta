@@ -111,6 +111,7 @@ form button {
   border: 0;
 
   border-radius: 8px;
+  margin-top: 64px;
   margin-bottom: 40px;
 
   transition: 400ms;
@@ -118,4 +119,43 @@ form button {
 
 form button:hover {
   background-color: #2fb86e;
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.items-grid li {
+  background-color: #E1FAEC;
+  list-style: none;
+
+  border: 2px solid #f5f5f5;
+  border-radius: 8px;
+
+  height: 180px;
+  padding: 33px 64px 87px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+
+  cursor: pointer;
+}
+
+.items-grid span {
+  margin-top: 23px;
+}
+
+.items-grid li.selected {
+  background: #E1FAEC;
+  border: 2px solid #34cb79;
+}
+
+.items-grid li img, 
+.items-grid li span {
+  pointer-events: none;
 }
