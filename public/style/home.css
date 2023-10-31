@@ -1,6 +1,6 @@
 #page-home {
   height: 100vh;
-  background: url('../imgs/home-background.svg') no-repeat;
+  background: url('/imgs/home-background.svg') no-repeat;
   background-position: 105vh bottom;
 }
 
@@ -89,7 +89,7 @@
 
 #page-home main a span::after {
   content: '';
-  background-image: url('../imgs/search.svg');
+  background-image: url('/imgs/search.svg');
   width: 20px;
   height: 20px;
 }

@@ -1,30 +1,18 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700display=swap" rel="stylesheet">
+{% extends 'layout.html' %}
 
+{% set pageId = "page-search-results" %}
 
-  <link rel="stylesheet" href="./src/style/home.css">
-  <link rel="stylesheet" href="./src/style/search-results.css">
-  <link rel="stylesheet" href="./src/style/responsive.css">
-  <link rel="stylesheet" href="./src/style/style.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title %}
   <title>Resultado da Pesquisa</title>
-</head>
-<body>
+{% endblock title %}
 
-<div id="page-search-results">
+{% block styles %}
+  <link rel="stylesheet" href="/style/search-results.css">
+  
+{% endblock styles %}
 
-    <header>
-      <img src="./src/imgs/logo.svg" alt="Logo Ecoleta Verde">
-      <div class="nav">
-        <img src="./src/imgs/arrow-left.svg" alt="Imagem Pequena para instruir cadastras um ponto">    
-        <a href="./index.html">Voltar para home</a>
-      </div>
-    </header>
+  {% block content %}
+  {% include 'partials/page-header.html' %}
 
   <main>
     <h3>
@@ -33,7 +21,7 @@
 
     <div class="cards">
       <div class="card">
-        <img src="/src/imgs/Imagem1.svg" alt="Colectoria">
+        <img src="/imgs/Imagem1.svg" alt="Colectoria">
         <h1>Colectoria</h1>
         <h3>Resíduos Eletrônicos, Lâmpadas</h3>
         <p>
@@ -44,7 +32,7 @@
       </div>
 
       <div class="card">
-        <img src="../src/imgs/Imagem2.svg" alt="Papersider">
+        <img src="/imgs/Imagem2.svg" alt="Papersider">
         <h1>Papersider</h1>
         <h3>Papéis e Papelão</h3>
         <p>
@@ -55,7 +43,5 @@
       </div>
     </div>
   </main>
-</div>
-
-</body>
-</html>
+  
+  {% endblock content %}
